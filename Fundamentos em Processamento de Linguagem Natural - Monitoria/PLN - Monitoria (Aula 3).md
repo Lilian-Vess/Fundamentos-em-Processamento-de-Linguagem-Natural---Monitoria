@@ -326,15 +326,17 @@ if b == "":
     b = x 
 if a == "JSON":
     if z == "":
-        c = str("{\n" + "\t'Título': " + "'" + (x) + "'" + ",\n" + "\t'Autor': " + "'" + (y) + "',\n" 
-        + "\t'co-autores': [\n\t\t" + "'" + ("',\n\t\t'".join(co_list)) + "'\n" + "\t],\n" + "}")
+        c = str("{\n" + "\t'Título': " + "'" + (x) + "'" + ",\n" + "\t'Autor': " 
+        + "'" + (y) + "',\n" + "\t'co-autores': [\n\t\t" + "'" + ("',\n\t\t'".join(co_list)) 
+        + "'\n" + "\t],\n" + "}")
         print(c)
         ficheiro = open(f'{b}.json', 'w') 
         ficheiro.write(c)
         ficheiro.close()
     else:
-        c = str("{\n" + "\t'Título': " + "'" + (x) + "'" + ",\n" + "\t'Autor': " + "'" + (y) + "',\n" 
-        + "\t'co-autores': [\n\t\t" + "'" + ("',\n\t\t'".join(co_list)) + "'\n" + "\t],\n" + "\t'data': " + "'" + (z) + "'\n" + "}")
+        c = str("{\n" + "\t'Título': " + "'" + (x) + "'" + ",\n" + "\t'Autor': " + "'" 
+        + (y) + "',\n" + "\t'co-autores': [\n\t\t" + "'" + ("',\n\t\t'".join(co_list)) 
+        + "'\n" + "\t],\n" + "\t'data': " + "'" + (z) + "'\n" + "}")
         print(c)
         ficheiro = open(f'{b}.json', 'w') 
         ficheiro.write(c)
@@ -422,15 +424,17 @@ if b == "":
     b = x 
 if a == "XML":
     if z == "":
-        c = str("<obra>\n" + "\t<titulo>" + (x) + "</titulo>" + "\n\t<autor>" + (y) + "</autor>" + "\n\t<co-autores>" 
-        + "\n\t\t<co-autor>" + ("</co-autor>\n\t\t<co-autor>".join(co_list)) + "</co-autor>\n" + "\t</co-autores>" + "\n</obra>")
+        c = str("<obra>\n" + "\t<titulo>" + (x) + "</titulo>" + "\n\t<autor>" + (y) + "</autor>" 
+        + "\n\t<co-autores>" + "\n\t\t<co-autor>" + ("</co-autor>\n\t\t<co-autor>".join(co_list)) 
+        + "</co-autor>\n" + "\t</co-autores>" + "\n</obra>")
         print(c)
         ficheiro = open(f'{b}.xml', 'w')
         ficheiro.write(c)
         ficheiro.close()
     else:
-        c = str("<obra data=" + "'" + (z) + "'" + ">\n" + "\t<titulo>" + (x) + "</titulo>" + "\n\t<autor>" + (y) + "</autor>" 
-        + "\n\t<co-autores>" + "\n\t\t<co-autor>" + ("</co-autor>\n\t\t<co-autor>".join(co_list)) + "</co-autor>\n" + "\t</co-autores>" + "\n</obra>")
+        c = str("<obra data=" + "'" + (z) + "'" + ">\n" + "\t<titulo>" + (x) + "</titulo>" + "\n\t<autor>" 
+        + (y) + "</autor>" + "\n\t<co-autores>" + "\n\t\t<co-autor>" + ("</co-autor>\n\t\t<co-autor>".join(co_list)) 
+        + "</co-autor>\n" + "\t</co-autores>" + "\n</obra>")
         print(c)
         ficheiro = open(f'{b}.xml', 'w')
         ficheiro.write(c)
