@@ -10,7 +10,6 @@ Olá, Mundo!</p>
 
 
 ```python
--*- coding: UTF-8 -*-
 print("Hello World!")
 ```
 
