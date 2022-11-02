@@ -115,18 +115,18 @@ while True:
 co_list = []
 count = 0 #variável count recebe zero...
 
-while True: #até que esse script/laço quebre/pare
-    co = input(f"Insira um co-autor ({count}/5): ") #input recebe (ou não) algum valor
-    if co != "": #(se) o valor for diferente de vazio ""
-        if count < 4: #(se)a variável count for menor que 4...
-          co_list.append(co) #...adiciona o input na lista de co-autores (co_list)...
-          count = count + 1 #...a variável count recebe +1...
-          continue #...e (continua) repete o laço
-        else: #(caso contrário) ou seja se a variável count já não for menor do que 4...
-          print("AVISO: Limite de co-autores atingido (5/5)") #...imprima esta mensagem ao usuário...
-          break #...e break/encerra esse script
+while True: #(enquanto) esse script/laço não quebrar/romper..
+  if count < 5: #(se) a variável for < 5...
+    co = input(f"Insira um co-autor ({count}/5): ") #a variável "co" recebe (ou não) um input
+    if co != "": #(se) o input for diferente de vazio ""
+        co_list.append(co) #...adiciona o input em "co_list"...
+        count = count + 1 #...a variável recebe + 1...
+        continue #...e (continue) repita o laço
     else: #(caso contrário) se o input for vazio ""
-        break # break/encerra esse script
+        break #quebre/encerre esse laço
+  elif count == 5: #(ou se) a variável for == 5...
+    print("AVISO: Limite de co-autores atingido (5/5)") #...imprima essa mensagem...
+    break #...quebre/encerre esse laço
 
 z = input("Insira a data da publicação: ")
 ```
@@ -158,21 +158,22 @@ while True:
 co_list = []
 count = 0
 
-while True: 
-  co = input(f"Insira um co-autor ({count}/5): ")
-  if co != "":
-    if co in co_list: #(se) o input já está contido na lista (co_list)...
-      print(f"AVISO: co-autor '{co}' já existe!") #...imprima esta mensagem ao usuário...
-      continue #...e repita o loop/laço
-    elif co not in co_list and count < 4: #(ou se) o input não está contido na lista (co_list) e count < 4...
-      co_list.append(co) #...adicione o input a lista (co_list)...
-      count = count + 1 #...e count recebe + 1
-      continue #...e repita o loop/laço
-    else: #(caso contrário) se o input não está contido na lista mas, count > 4...
-      print("AVISO: Limite de co-autores atingido (5/5)") #...imprima esta mensagem ao usuário...
-      break #encerre esse script/laço
-  else:
-    break
+while True: #(enquanto) esse script/laço não quebrar/romper..
+  if count < 5: #(se) a variável for < 5...
+    co = input(f"Insira um co-autor ({count}/5): ") #a variável "co" recebe (ou não) um input
+    if co != "": #(se) o input for diferente de vazio ""
+      if co in co_list: #e (se) o input já está em (in) "co_list"... 
+        print(f"AVISO: co-autor '{co}' já existe!") #...imprima esta mensagem...
+        continue #...e (continue) repita o laço
+      elif co not in co_list: #(ou se) o input não está em (not in) "co_list"...
+        co_list.append(co) #...adiciona o input em "co_list"...
+        count = count + 1 #...a variável recebe + 1....
+        continue #...e (continue) repita o laço
+    else: #(caso contrário) se o input for vazio ""
+        break #quebre/encerre esse laço
+  elif count == 5: #(ou se) a variável for == 5...
+    print("AVISO: Limite de co-autores atingido (5/5)") #...imprima essa mensagem...
+    break #...quebre/encerre esse laço
 
 z = input("Insira a data da publicação: ")
 ```
@@ -223,20 +224,21 @@ co_list = []
 count = 0
 
 while True: 
-  co = input(f"Insira um co-autor ({count}/5): ")
-  if co != "":
-    if co in co_list:
-      print(f"AVISO: co-autor '{co}' já existe!")
-      continue
-    elif co not in co_list and count < 4:
-      co_list.append(co)
-      count = count + 1
-      continue
+  if count < 5: 
+    co = input(f"Insira um co-autor ({count}/5): ") 
+    if co != "": 
+      if co in co_list: 
+        print(f"AVISO: co-autor '{co}' já existe!") 
+        continue 
+      elif co not in co_list: 
+        co_list.append(co) 
+        count = count + 1 
+        continue 
     else: 
-      print("AVISO: Limite de co-autores atingido (5/5)")
-      break 
-  else:
-    break
+        break 
+  elif count == 5: 
+    print("AVISO: Limite de co-autores atingido (5/5)")
+    break 
 
 z = input("Insira a data da publicação: ")
 
@@ -316,20 +318,21 @@ co_list = []
 count = 0
 
 while True: 
-  co = input(f"Insira um co-autor ({count}/5): ")
-  if co != "":
-    if co in co_list:
-      print(f"AVISO: co-autor '{co}' já existe!")
-      continue
-    elif co not in co_list and count < 4:
-      co_list.append(co)
-      count = count + 1
-      continue
+  if count < 5: 
+    co = input(f"Insira um co-autor ({count}/5): ") 
+    if co != "": 
+      if co in co_list: 
+        print(f"AVISO: co-autor '{co}' já existe!") 
+        continue 
+      elif co not in co_list: 
+        co_list.append(co) 
+        count = count + 1 
+        continue 
     else: 
-      print("AVISO: Limite de co-autores atingido (5/5)")
-      break 
-  else:
-    break
+        break 
+  elif count == 5: 
+    print("AVISO: Limite de co-autores atingido (5/5)")
+    break 
 
 z = input("Insira a data da publicação: ")
 
@@ -414,20 +417,21 @@ co_list = []
 count = 0
 
 while True: 
-  co = input(f"Insira um co-autor ({count}/5): ")
-  if co != "":
-    if co in co_list:
-      print(f"AVISO: co-autor '{co}' já existe!")
-      continue
-    elif co not in co_list and count < 4:
-      co_list.append(co)
-      count = count + 1
-      continue
+  if count < 5: 
+    co = input(f"Insira um co-autor ({count}/5): ") 
+    if co != "": 
+      if co in co_list: 
+        print(f"AVISO: co-autor '{co}' já existe!") 
+        continue 
+      elif co not in co_list: 
+        co_list.append(co) 
+        count = count + 1 
+        continue 
     else: 
-      print("AVISO: Limite de co-autores atingido (5/5)")
-      break 
-  else:
-    break
+        break 
+  elif count == 5: 
+    print("AVISO: Limite de co-autores atingido (5/5)")
+    break 
 
 z = input("Insira a data da publicação: ")
 
