@@ -7,25 +7,30 @@ Exercícios<p>
 <p>O que fazer:<br /></p>
     
 <p><strong>Enquanto</strong> o <i>input</i> não for vazio, ele deverá pedir repetidamente o nome de um co-autor, criando uma lista de autores.</p>
-    
-<p>&emsp;Insira um título: A Mensagem<br />
-&emsp;Insira o autor: Fernando Pessoa<br />
-&emsp;Insira um co-autor: Pedro<br />
-&emsp;Insira um co-autor: Tiago<br />
-&emsp;Insira um co-autor: Francisca<br />
-&emsp;Insira um co-autor:<br />
-&emsp;Insira a data da publicação: 1934/12/01</p>
+
+```
+Insira um título: A Mensagem
+Insira o autor: Fernando Pessoa
+Insira um co-autor: Pedro
+Insira um co-autor: Tiago
+Insira um co-autor: Francisca
+Insira um co-autor:
+Insira a data da publicação: 1934/12/01
+```
 
 <p>Deverá imprimir:<br /></p>
 
-<p>&emsp;titulo: A Mensagem<br />
-&emsp;autor: Fernando Pessoa<br />
-&emsp;co-autores: Pedro; Tiago; Francisca;<br />
-&emsp;data: 1934/12/01
-</p>
+```
+titulo: A Mensagem
+autor: Fernando Pessoa
+co-autores: Pedro; Tiago; Francisca;
+data: 1934/12/01
+```
 
 
 ```python
+# o método .join() permite concatenar todos os itens de uma lista definindo seus respectivos separadores
+# https://www.w3schools.com/python/python_lists_join.asp
 while True:
     x = input("Insira um título: ")
     y = input("Insira o autor: ")
@@ -35,15 +40,15 @@ while True:
     else:
         break
 
-co_list = [] #criação de um lista vazia
+co_list = [] #variável recebe uma lista vazia
 
-while True: #(enquanto) esse laço não quebrar/romper...
+while True: #(enquanto) esse script/laço não quebrar/romper...
     co = input("Insira um co-autor: ")
     if co != "": #...(se) o input para co-autor for diferente de vazio...
         co_list.append(co) #...adicione o input a lista (co_list)...
-        continue #...(continue) repita o laço
+        continue #...e (continue) repita o script/laço
     else: #(caso contrário) se o input para co-autor for vazio...
-        break #...(quebre) pare o laço
+        break #...(quebre) pare o script/laço
         
 z = input("Insira a data da publicação: ")
 a = input("Formato final (YAML, JSON ou XML): ").upper()
@@ -84,15 +89,17 @@ if a == "YAML" or a == "":
 
 <p>O programa deverá ter o seguinte comportamento:</p>
 
-<p><i>Insira um título: A Mensagem<br />
-Insira o autor: Fernando Pessoa<br />
-Insira um co-autor (0/5): Pedro<br />
-Insira um co-autor (1/5): Tiago<br />
-Insira um co-autor (2/5): Francisca<br />
-Insira um co-autor (3/5): Carolina<br />
-Insira um co-autor (4/5): Guilherme<br />
-AVISO: Limite de co-autores atingido (5/5)<br />
-Insira a data da publicação: 1934/12/01</i></p>
+```
+Insira um título: A Mensagem
+Insira o autor: Fernando Pessoa
+Insira um co-autor (0/5): Pedro
+Insira um co-autor (1/5): Tiago
+Insira um co-autor (2/5): Francisca
+Insira um co-autor (3/5): Carolina
+Insira um co-autor (4/5): Guilherme
+AVISO: Limite de co-autores atingido (5/5)
+Insira a data da publicação: 1934/12/01
+```
 
 
 ```python
@@ -106,20 +113,20 @@ while True:
         break
 
 co_list = []
-count = 0 #variável recebe zero...
+count = 0 #variável count recebe zero...
 
-while True: #até que o laço quebre/pare
-    co = input(f"Insira um co-autor ({count}/5): ")
-    if co != "":
+while True: #até que esse script/laço quebre/pare
+    co = input(f"Insira um co-autor ({count}/5): ") #input recebe (ou não) algum valor
+    if co != "": #(se) o valor for diferente de vazio ""
         if count < 4: #(se)a variável count for menor que 4...
           co_list.append(co) #...adiciona o input na lista de co-autores (co_list)...
-          count = count + 1 #...e a variável count recebe 1
-          continue
-        else: #(caso contrário) ou seja se a variável count se tornar 5...
+          count = count + 1 #...a variável count recebe +1...
+          continue #...e (continua) repete o laço
+        else: #(caso contrário) ou seja se a variável count já não for menor do que 4...
           print("AVISO: Limite de co-autores atingido (5/5)") #...imprima esta mensagem ao usuário...
-          break #...e quebre o programa
-    else:
-        break
+          break #...e break/encerra esse script
+    else: #(caso contrário) se o input for vazio ""
+        break # break/encerra esse script
 
 z = input("Insira a data da publicação: ")
 ```
@@ -156,14 +163,14 @@ while True:
   if co != "":
     if co in co_list: #(se) o input já está contido na lista (co_list)...
       print(f"AVISO: co-autor '{co}' já existe!") #...imprima esta mensagem ao usuário...
-      continue #...e repita o laço
-    elif co not in co_list and count < 4: #(se) o input não está contido na lista (co_list) e count < 4...
-      co_list.append(co) #...adicione o input a lista...
+      continue #...e repita o loop/laço
+    elif co not in co_list and count < 4: #(ou se) o input não está contido na lista (co_list) e count < 4...
+      co_list.append(co) #...adicione o input a lista (co_list)...
       count = count + 1 #...e count recebe + 1
-      continue
-    else: 
-      print("AVISO: Limite de co-autores atingido (5/5)")
-      break 
+      continue #...e repita o loop/laço
+    else: #(caso contrário) se o input não está contido na lista mas, count > 4...
+      print("AVISO: Limite de co-autores atingido (5/5)") #...imprima esta mensagem ao usuário...
+      break #encerre esse script/laço
   else:
     break
 
@@ -187,15 +194,17 @@ z = input("Insira a data da publicação: ")
 
 <p>4. Melhore a formatação do campo dos co-autores nos ficheiros gerados. No caso do ficheiro ser YAML, o resultado deverá ser o seguinte:</p>
 
-<p><i>titulo: A Mensagem<br />
-autor: Fernando Pessoa<br />
-co-autores:<br />
-  &emsp;- Pedro<br />
-  &emsp;- Tiago<br />
-  &emsp;- Francisca<br />
-  &emsp;- Carolina<br />
-  &emsp;- Guilherme<br />
-    data: 1934/12/01</i></p>
+```
+titulo: A Mensagem
+autor: Fernando Pessoa
+co-autores:
+    - Pedro
+    - Tiago
+    - Francisca
+    - Carolina
+    - Guilherme
+data: 1934/12/01
+```
 
 
 ```python
