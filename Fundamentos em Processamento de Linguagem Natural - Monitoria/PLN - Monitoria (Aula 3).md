@@ -282,18 +282,20 @@ if a == "YAML" or a == "":
 
 <p>No caso de ser JSON:</p>
 
-<p><i>{<br />
-   &emsp;"titulo": "A Mensagem",<br />
-   &emsp;"autor": "Fernando Pessoa",<br />
-   &emsp;"co-autores": [<br />
-      &emsp;&emsp;"Pedro",<br />
-      &emsp;&emsp;"Tiago",<br />
-      &emsp;&emsp;"Francisca",<br />
-      &emsp;&emsp;"Carolina",<br />
-      &emsp;&emsp;"Guilherme"<br /> 
-   ],<br />
-   &emsp;"data": "1934/12/01"<br />
-    }</i></p>
+```
+{
+   "titulo": "A Mensagem",
+   "autor": "Fernando Pessoa",
+   "co-autores": [
+      "Pedro",
+      "Tiago",
+      "Francisca",
+      "Carolina",
+      "Guilherme"
+   ],
+   "data": "1934/12/01"
+    }
+```
 
 
 ```python
