@@ -281,6 +281,7 @@ if a == "YAML" or a == "":
     - Tiago 
     - Francisca 
     - Carolina
+    - Guilherme
     Data: 1934/12/01
 
 
@@ -359,6 +360,7 @@ if a == "JSON":
         ficheiro.close()
 ```
 
+```
     Insira um título: A Mensagem
     Insira o autor: Fernando Pessoa
     Insira um co-autor (0/5): Pedro
@@ -374,14 +376,15 @@ if a == "JSON":
     	'Título': 'A Mensagem',
     	'Autor': 'Fernando Pessoa',
     	'co-autores': [
-    		'Pedro',
-    		'Tiago',
-    		'Francisca',
-    		'Carolina'
+            'Pedro',
+            'Tiago',
+            'Francisca',
+            'Carolina',
+            'Guilherme'
     	],
     	'data': '1934/12/01'
     }
-
+```
 
 <p>No caso de ser XML:</p>
 
@@ -458,6 +461,7 @@ if a == "XML":
         ficheiro.close()
 ```
 
+```
     Insira um título: A Mensagem
     Insira o autor: Fernando Pessoa
     Insira um co-autor (0/5): Pedro
@@ -473,9 +477,11 @@ if a == "XML":
     	<titulo>A Mensagem</titulo>
     	<autor>Fernando Pessoa</autor>
     	<co-autores>
-    		<co-autor>Pedro</co-autor>
-    		<co-autor>Tiago</co-autor>
-    		<co-autor>Francisca</co-autor>
-    		<co-autor>Carolina</co-autor>
+             <co-autor>Pedro</co-autor>
+             <co-autor>Tiago</co-autor>
+             <co-autor>Francisca</co-autor>
+             <co-autor>Carolina</co-autor>
+             <co-autor>Guilherme</co-autor>
     	</co-autores>
     </obra>
+```
