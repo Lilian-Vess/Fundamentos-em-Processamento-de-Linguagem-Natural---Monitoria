@@ -12,7 +12,7 @@ Olá, Mundo!</p>
 ```python
 print("Hello World!")
 ```
-
+Hello World!
 
 <meta charset="utf-8">
 <p>2. Escreva um programa que imprima na consola o seguinte:<br />
