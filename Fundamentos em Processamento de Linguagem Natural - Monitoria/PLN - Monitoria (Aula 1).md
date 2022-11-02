@@ -15,13 +15,6 @@ print("Hello World!")
 ```
 
 
-      File "/tmp/ipykernel_86726/3290390855.py", line 1
-        -*- coding: UTF-8 -*-
-         ^
-    SyntaxError: invalid syntax
-
-
-
 <meta charset="utf-8">
 <p>2. Escreva um programa que imprima na consola o seguinte:<br />
 <br />
