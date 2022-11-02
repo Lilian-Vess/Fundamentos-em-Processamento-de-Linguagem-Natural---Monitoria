@@ -274,19 +274,18 @@ while True: #(enquanto) este loop/script não se encerrar
     Insira a data da publicação: 1934/12/01
 
 
-<p>2. Implemente também o formato XML.<br />
-<br />
+<p>2. Implemente também o formato XML.</p>
+
 <i>mensagem.xml</i>
-    
+```    
 <obra data="1934/12/01">
     <titulo>A Mensagem</titulo>
     <autor>Fernando Pessoa</autor>
 </obra>
 
 
+
 ```python
-# if a == "YAML" or a == "":...
-# elif a == "JSON": ...
 x = input("Insira um título: ")
 y = input("Insira o autor: ")
 z = input("Insira a data da publicação: ") 
@@ -296,6 +295,9 @@ b = input("Nome do ficheiro: ")
 if b == "": 
     b = x 
     
+# if a == "YAML" or a == "":...
+# elif a == "JSON": ...
+
 if a == "XML":
     if z == "":
         c = str(f"<obra>\n\t<titulo>{x}</titulo>\n\t<autor>{y}</autor>\n</obra>")
@@ -320,4 +322,3 @@ if a == "XML":
     	<titulo>A Mensagem</titulo>
     	<autor>Fernando Pessoa</autor>
     </obra>
-
