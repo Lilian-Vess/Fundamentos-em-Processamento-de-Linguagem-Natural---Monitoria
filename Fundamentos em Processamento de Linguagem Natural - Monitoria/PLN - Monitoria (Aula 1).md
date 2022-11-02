@@ -82,7 +82,7 @@ print(f"{y}\n{z}\n{z}\n{z}\n{y}")
 
 <meta charset="utf-8">
 <p>4. Escreva um programa que leia da consola um nome e imprima uma saudação.<br />
-Exemplo: se o nome inserido for Pedro, o programa deverá imprimir:<br />
+    <strong>Exemplo:</strong> se o nome inserido for <i>Pedro</i>, o programa deverá imprimir:<br />
 Olá, Pedro!</p>
 
 
