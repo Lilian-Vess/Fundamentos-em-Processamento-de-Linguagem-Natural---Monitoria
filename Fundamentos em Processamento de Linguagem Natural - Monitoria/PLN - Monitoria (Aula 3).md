@@ -246,13 +246,15 @@ if b == "":
     b = x 
 if a == "YAML" or a == "":
     if z == "":
-        c = str("Título: " + (x) + "\nAutor: " + (y) + "\nco-autores: \n" + "-" + (" \n-".join(co_list)))
+        c = str("Título: " + (x) + "\nAutor: " + (y) + "\nco-autores: \n" + "-" 
+        + (" \n-".join(co_list))) #formatação da lista se YAML com .join()
         print(c)
         ficheiro = open(f'{b}.yaml', 'w') 
         ficheiro.write(c)
         ficheiro.close()
     else:
-        c = str("Título: " + (x) + "\nAutor: " + (y) + "\nco-autores: \n" + "-" + (" \n-".join(co_list)) + "\nData: " + (z))
+        c = str("Título: " + (x) + "\nAutor: " + (y) + "\nco-autores: \n" + "-" 
+        + (" \n-".join(co_list)) + "\nData: " + (z)) #formatação da lista se YAML com .join()
         print(c)
         ficheiro = open(f'{b}.yaml', 'w') 
         ficheiro.write(c)
@@ -339,7 +341,7 @@ if a == "JSON":
     if z == "":
         c = str("{\n" + "\t'Título': " + "'" + (x) + "'" + ",\n" + "\t'Autor': " 
         + "'" + (y) + "',\n" + "\t'co-autores': [\n\t\t" + "'" + ("',\n\t\t'".join(co_list)) 
-        + "'\n" + "\t],\n" + "}")
+        + "'\n" + "\t],\n" + "}") #formatação da lista se JSON com .join()
         print(c)
         ficheiro = open(f'{b}.json', 'w') 
         ficheiro.write(c)
@@ -347,7 +349,7 @@ if a == "JSON":
     else:
         c = str("{\n" + "\t'Título': " + "'" + (x) + "'" + ",\n" + "\t'Autor': " + "'" 
         + (y) + "',\n" + "\t'co-autores': [\n\t\t" + "'" + ("',\n\t\t'".join(co_list)) 
-        + "'\n" + "\t],\n" + "\t'data': " + "'" + (z) + "'\n" + "}")
+        + "'\n" + "\t],\n" + "\t'data': " + "'" + (z) + "'\n" + "}") #formatação da lista se JSON com .join()
         print(c)
         ficheiro = open(f'{b}.json', 'w') 
         ficheiro.write(c)
@@ -437,7 +439,7 @@ if a == "XML":
     if z == "":
         c = str("<obra>\n" + "\t<titulo>" + (x) + "</titulo>" + "\n\t<autor>" + (y) + "</autor>" 
         + "\n\t<co-autores>" + "\n\t\t<co-autor>" + ("</co-autor>\n\t\t<co-autor>".join(co_list)) 
-        + "</co-autor>\n" + "\t</co-autores>" + "\n</obra>")
+        + "</co-autor>\n" + "\t</co-autores>" + "\n</obra>") #formatação da lista se XML com .join()
         print(c)
         ficheiro = open(f'{b}.xml', 'w')
         ficheiro.write(c)
@@ -445,7 +447,7 @@ if a == "XML":
     else:
         c = str("<obra data=" + "'" + (z) + "'" + ">\n" + "\t<titulo>" + (x) + "</titulo>" + "\n\t<autor>" 
         + (y) + "</autor>" + "\n\t<co-autores>" + "\n\t\t<co-autor>" + ("</co-autor>\n\t\t<co-autor>".join(co_list)) 
-        + "</co-autor>\n" + "\t</co-autores>" + "\n</obra>")
+        + "</co-autor>\n" + "\t</co-autores>" + "\n</obra>") #formatação da lista se XML com .join()
         print(c)
         ficheiro = open(f'{b}.xml', 'w')
         ficheiro.write(c)
@@ -473,4 +475,3 @@ if a == "XML":
     		<co-autor>Carolina</co-autor>
     	</co-autores>
     </obra>
-
